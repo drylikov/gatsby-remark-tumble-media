@@ -1,0 +1,47 @@
+{
+  "name": "gatsby-remark-tumble-media",
+  "author": "Isaac Z. Schlueter <i@izs.me>",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-transformer-remark",
+    "gatsby-remark"
+  ],
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "sharp": "^0.23.3"
+  },
+  "devDependencies": {
+    "tap": "^14.10.1"
+  },
+  "scripts": {
+    "preversion": "npm test",
+    "postversion": "npm publish",
+    "postpublish": "git push origin --follow-tags",
+    "test": "tap -j1",
+    "snap": "tap -j1"
+  },
+  "files": [
+    "index.js",
+    "gatsby-browser.js",
+    "gatsby-node.js",
+    "overrides.css",
+    "base.css"
+  ],
+  "version": "1.2.3",
+  "description": "A gatsby plugin to do tumble blog style media embeds, like photosets, videos, and links.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isaacs/gatsby-remark-tumble-media.git"
+  },
+  "license": "ISC",
+  "tap": {
+    "100": true,
+    "files": [
+      "test/00-cleanup.js",
+      "test/cases",
+      "test/zz-cleanup.js"
+    ]
+  }
+}
